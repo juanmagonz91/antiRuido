@@ -1,0 +1,15 @@
+fastapi
+uvicorn
+sqlalchemy
+psycopg2-binary
+pgvector
+langchain
+langchain-google-genai
+playwright
+beautifulsoup4
+pandas
+python-dotenv
+httpx
+alembic
+playwright>=1.40.0
+lxml>=4.9.0
