@@ -1,4 +1,4 @@
-version: '3.8'
+
 
 services:
   backend:
@@ -22,7 +22,7 @@ services:
       - signal_net
 
   db:
-    image: pgvector/pgvector:pg16
+    image: ankane/pgvector:v0.5.1
     container_name: signal_db
     ports:
       - "5432:5432"

@@ -54,7 +54,7 @@ CREATE TABLE content_history (
     
     -- Métricas de Análisis IA
     signal_score DECIMAL(3,2), -- 0.00 a 1.00
-    is_signal BOOLEAN GENERATED ALWAYS AS (signal_score >= 0.6) STORED,
+    is_signal BOOLEAN,
     rejection_reason TEXT, -- NULL si fue aceptado
     category_code VARCHAR(20),
     
@@ -63,7 +63,7 @@ CREATE TABLE content_history (
     time_saved_seconds INTEGER, -- Se llena solo si is_signal = FALSE
     
     -- Vector Search
-    embedding vector(1536),
+    embedding vector(768),
     
     analyzed_at TIMESTAMP WITH TIME ZONE DEFAULT CURRENT_TIMESTAMP
 );
